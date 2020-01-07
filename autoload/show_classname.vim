@@ -13,10 +13,13 @@ function! Get_class_name_test()
 endfunction
 
 let line_list = Get_class_name_test()
+let line_number = 0
+let match_str = []
 for line in line_list
+  let line_number += 1
   let is_hit = match(line, "function")
   if is_hit == 0
-    let match_str = matchstr(line, "function")
+    call add(match_str, [line_number, matchstr(line, "function!")])
   endif
 endfor
 
