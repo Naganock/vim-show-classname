@@ -18,7 +18,7 @@ function! show_classname#Get_class()
   let match_str = []
   for line in line_list
     let line_number += 1
-    let is_hit = match(line, "clss [a-zA-Z]*")
+    let is_hit = match(line, "class [a-zA-Z]*")
     if is_hit == 0
       let hikizan = line(".") - line_number
       call add(match_str, [hikizan, matchstr(line, "class [a-zA-Z]*")])
