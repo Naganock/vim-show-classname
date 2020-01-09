@@ -39,3 +39,4 @@ function! show_classname#Get_class()
     return split(class_name, " ")[1]
   endif
 endfunction
+call show_classname#Get_class()
