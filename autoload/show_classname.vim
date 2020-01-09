@@ -34,10 +34,8 @@ function! show_classname#Get_class()
     endif
   endfor
   if class_name == 0
-    echo class_name
     return class_name
   else
-    echo split(class_name, " ")[1]
     return split(class_name, " ")[1]
   endif
 endfunction
